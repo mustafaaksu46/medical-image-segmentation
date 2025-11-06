@@ -30,19 +30,8 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 
 ## 📊 Dataset
 
-- **Dataset**: [Dresden Abdominal Anatomy Dataset](https://zenodo.org/record/XXXX)  
+- **Dataset**: [Dresden Abdominal Anatomy Dataset](https://www.nature.com/articles/s41597-022-01719-2)  
 - **Type**: Annotated laparoscopic images  
-- **Resolutions**: 128×128, 256×256, 512×512  
 - **Classes**: Liver, Pancreas, Ureters, Vesicular glands, Intestinal veins  
 - **Usage**: Used according to the dataset license and data usage agreement.
 
----
-
-## ⚙️ Installation
-
-Clone this repository and install dependencies:
-
-```bash
-git clone https://github.com/mustafaaksu/deep-abdomen-segmentation.git
-cd deep-abdomen-segmentation
-pip install -r requirements.txt
