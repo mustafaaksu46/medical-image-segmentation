@@ -24,7 +24,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 |--------|------------|--------|
 | **DeepLabV3** | PyTorch | Atrous convolution-based semantic segmentation |
 | **U-Net++** | PyTorch | Nested skip connections for better localization |
-| **SegFormer** | PyTorch (HuggingFace Transformers) | Transformer-based lightweight segmentation model |
+| **SegFormer** | PyTorch | Transformer-based lightweight segmentation model |
 
 ---
 
