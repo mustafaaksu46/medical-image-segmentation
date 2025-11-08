@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision>=0.15.0
+pandas>=2.0.0
+numpy>=1.24.0
+opencv-python>=4.7.0
+albumentations>=1.3.0
+segmentation-models-pytorch>=0.3.3
+dropblock>=0.3.0
+matplotlib>=3.7.0
