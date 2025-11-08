@@ -58,3 +58,26 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
     - **Version numbers** indicate minimum requirements
     - **Python standard libraries** (`os`, `csv`, `gc`, `time`, `random`) are not included as they come with Python
     - **torch.amp** module is included with PyTorch 2.0+
+
+
+## 📋 Requirements
+
+- **PyTorch** (torch, torchvision) - Deep learning framework
+- **OpenCV** - Image processing
+- **Albumentations** - Data augmentation
+- **Segmentation Models PyTorch** - Pre-built segmentation models (DeepLabV3Plus, etc.)
+- **DropBlock** - Regularization technique
+- **NumPy & Pandas** - Data processing
+- **Matplotlib** - Visualization
+
+## 🚀 Installation
+```bash
+pip install -r requirements.txt
+```
+
+## 💡 Notes
+
+- **CUDA support** - Uncomment the relevant lines if needed
+- **Version numbers** indicate minimum requirements
+- **Python standard libraries** (`os`, `csv`, `gc`, `time`, `random`) are not included as they come with Python
+- **torch.amp** module is included with PyTorch 2.0+
