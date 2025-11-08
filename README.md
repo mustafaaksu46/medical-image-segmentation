@@ -45,7 +45,8 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
   Matplotlib - Visualization
 
 🚀 Installation:
-  bashpip install -r requirements.txt
+  bash
+   pip install -r requirements.txt
     Notes:
       CUDA support - Uncomment the relevant lines if needed
       Version numbers indicate minimum requirements
