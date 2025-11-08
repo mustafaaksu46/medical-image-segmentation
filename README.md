@@ -45,14 +45,15 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 - **NumPy & Pandas** - Data processing
 - **Matplotlib** - Visualization
 
-## 🚀 Installation
-```bash
-pip install -r requirements.txt
-```
+  ``` ## 🚀 Installation
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## 💡 Notes
+  ```  ## 💡 Notes
 
-- **CUDA support** - Uncomment the relevant lines if needed
-- **Version numbers** indicate minimum requirements
-- **Python standard libraries** (`os`, `csv`, `gc`, `time`, `random`) are not included as they come with Python
-- **torch.amp** module is included with PyTorch 2.0+
+    - **CUDA support** - Uncomment the relevant lines if needed
+    - **Version numbers** indicate minimum requirements
+    - **Python standard libraries** (`os`, `csv`, `gc`, `time`, `random`) are not included as they come with Python
+    - **torch.amp** module is included with PyTorch 2.0+
+  ```
