@@ -35,6 +35,8 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 - **Classes**: Liver, Pancreas, Ureters, Vesicular glands, Intestinal veins  
 - **Usage**: Used according to the dataset license and data usage agreement.
 
+---
+
 ## 📋 Requirements
 
 - **PyTorch** (torch, torchvision) - Deep learning framework
