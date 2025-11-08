@@ -1,9 +1,24 @@
+# Deep Learning Framework
 torch>=2.0.0
 torchvision>=0.15.0
-pandas>=2.0.0
-numpy>=1.24.0
-opencv-python>=4.7.0
-albumentations>=1.3.0
+
+# Computer Vision
+opencv-python>=4.8.0
+albumentations>=1.3.1
+
+# Segmentation Models
 segmentation-models-pytorch>=0.3.3
+
+# DropBlock Regularization
 dropblock>=0.3.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Visualization
 matplotlib>=3.7.0
+
+# CUDA Support (optional, uncomment if needed)
+# torch-cuda>=11.8  # For CUDA 11.8
+# torch-cuda>=12.1  # For CUDA 12.1
