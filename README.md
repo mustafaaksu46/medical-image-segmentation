@@ -49,13 +49,13 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 
   ``` ## 🚀 Installation
     bash
+  ```
     pip install -r requirements.txt
   ```
 
-  ```  ## 💡 Notes
+   ## 💡 Notes
 
     - **CUDA support** - Uncomment the relevant lines if needed
     - **Version numbers** indicate minimum requirements
     - **Python standard libraries** (`os`, `csv`, `gc`, `time`, `random`) are not included as they come with Python
     - **torch.amp** module is included with PyTorch 2.0+
-  ```
