@@ -51,8 +51,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 ```bash
   pip install -r requirements.txt
 ```
-
-    ## 💡 Notes
+  ## 💡 Notes
 
   - **CUDA support** - Uncomment the relevant lines if needed
   - **Version numbers** indicate minimum requirements
