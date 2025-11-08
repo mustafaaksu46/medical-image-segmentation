@@ -48,7 +48,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 - **Matplotlib** - Visualization
 
   ## 🚀 Installation
-  bash
+  
   pip install -r requirements.txt
 
   ## 💡 Notes
