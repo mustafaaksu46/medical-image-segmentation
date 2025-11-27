@@ -10,6 +10,7 @@ import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 import albumentations as A
+import torch.nn.functional as F
 import segmentation_models_pytorch as smp
 from albumentations.pytorch import ToTensorV2
 from torch.utils.data import Dataset, DataLoader, random_split
@@ -147,6 +148,49 @@ class CombinedLoss(nn.Module):
         dice = self.dice_loss(inputs, targets)
         focal = self.focal_loss(inputs, targets)
         return self.dice_weight * dice + self.focal_weight * focal
+
+class DiceBCELoss(nn.Module):
+    def __init__(self, dice_weight=0.5, bce_weight=0.5):
+        super(DiceBCELoss, self).__init__()
+        self.dice_weight = dice_weight
+        self.bce_weight = bce_weight
+
+    def forward(self, inputs, targets):
+        smooth = 1e-5
+
+        inputs_flat = inputs.view(-1)
+        targets_flat = targets.view(-1)
+
+        # ✅ LOGITS kullanıldığı için BU SATIR DEĞİŞTİRİLDİ
+        bce_loss = F.binary_cross_entropy_with_logits(inputs_flat, targets_flat)  # <-- Doğru: Logits ile BCE
+
+        probs = torch.sigmoid(inputs_flat)  # <-- Dice için sigmoid burada uygulanıyor
+        intersection = (probs * targets_flat).sum()
+        dice_loss = 1 - (2. * intersection + smooth) / (probs.sum() + targets_flat.sum() + smooth)
+
+        return self.dice_weight * dice_loss + self.bce_weight * bce_loss
+
+class FocalBCEDiceLoss(nn.Module):
+    def __init__(self, alpha=0.85, gamma=1.5, smooth=1e-6):
+        super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.bce = nn.BCEWithLogitsLoss(reduction='none')
+        self.smooth = smooth # smooth'u bir instance değişkeni yapalım
+
+    def forward(self, inputs, targets):
+        # Focal Loss kısmı
+        bce_loss = self.bce(inputs, targets)
+        pt = torch.exp(-bce_loss)
+        focal_loss = (self.alpha * (1 - pt) ** self.gamma * bce_loss).mean()
+        inputs_sigmoid = torch.sigmoid(inputs) # Sigmoid uygulama
+        inputs_flat = inputs_sigmoid.view(-1)
+        targets_flat = targets.view(-1)
+
+        intersection = (inputs_flat * targets_flat).sum()
+        dice_loss = 1 - (2. * intersection + self.smooth) / (inputs_flat.sum() + targets_flat.sum() + self.smooth) # smooth kullanımı
+
+        return focal_loss + dice_loss
 
 """
 **************************************************************************
