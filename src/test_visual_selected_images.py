@@ -18,9 +18,10 @@ H = 256
 W = 256
 NUMEPOCS = 50
 THRESHOLD = 0.40
-MODEL = "DeepLabV3Plus"
+MODEL = "DeepLabV3Plus"    #  Unet, UnetPlusPlus, DeepLabV3, DeepLabV3Plus, Segformer
 
-# Indices of images to be tested
+# Indices of images to be tested. 
+# To compare the results of all three models, the images with the same indices were used.
 SELECTED_INDICES = [16, 72, 128, 156, 212, 256, 305, 357, 401, 473, 565, 611, 647, 752, 812, 877, 910, 950, 1016, 1068]
 
 def get_images_and_masks_no_shuffle(root_dir):
@@ -254,5 +255,6 @@ if __name__ == "__main__":
             selected_indices=SELECTED_INDICES
 
         )
+
 
 
