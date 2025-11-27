@@ -152,8 +152,9 @@ if __name__ == "__main__":
         torch.cuda.empty_cache()
         print("CUDA cache cleared (or an attempt to clear it was made).")
 
-    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_yeni"
-
+    # “Path to the prepared dataset”
+    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"    
+    
     start_time = time.time()
 
     image_paths, mask_paths = get_images_and_masks(dataset_path)
