@@ -231,7 +231,7 @@ if __name__ == "__main__":
         in_channels=3,
         classes=1,
         encoder_depth=5,
-        decoder_aspp_dropout=0.5  #  Used only for DeepLabv3Plus and DeepLabv3
+        decoder_aspp_dropout=0.5  #  Used only for DeepLabv3Plus and DeepLabv3 models
     )
 
     model = DropBlockDeepLab(base_model, block_size=7, drop_prob=0.10)
