@@ -131,7 +131,7 @@ if __name__ == "__main__":
     import torch.multiprocessing
     torch.multiprocessing.freeze_support()
 
-    # ✅ Log and result Files
+    # Log and result Files
     train_log_file = str(NUMEPOCS) + "_Pancreas_training_log_" + MODEL + ".csv"
     test_log_file = str(NUMEPOCS) + "_Pancreas_test_results_" + MODEL + ".csv"
 
