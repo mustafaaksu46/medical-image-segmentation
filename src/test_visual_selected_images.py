@@ -20,7 +20,7 @@ NUMEPOCS = 50
 THRESHOLD = 0.40
 MODEL = "DeepLabV3Plus"
 
-# Test edilecek görüntülerin indeksleri
+# Indices of images to be tested
 SELECTED_INDICES = [16, 72, 128, 156, 212, 256, 305, 357, 401, 473, 565, 611, 647, 752, 812, 877, 910, 950, 1016, 1068]
 
 def get_images_and_masks_no_shuffle(root_dir):
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
     torch.multiprocessing.freeze_support()
 
-    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_yeni"
+    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_new"
     model_path = f"{NUMEPOCS}_best_model_{MODEL}.pth"
 
     # Check if model file exists
@@ -251,4 +251,5 @@ if __name__ == "__main__":
             num_epochs=NUMEPOCS,
             batch_size=12,
             selected_indices=SELECTED_INDICES
+
         )
