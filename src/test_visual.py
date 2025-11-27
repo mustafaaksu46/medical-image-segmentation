@@ -188,7 +188,7 @@ if __name__ == "__main__":
     torch.multiprocessing.freeze_support()
     
   # “Path to the prepared dataset”
-    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"  
+    dataset_path = "   Local dataset path   "  
     model_path = f"{NUMEPOCS}_best_model_{MODEL}.pth"
 
     # Check if model file exists
@@ -205,3 +205,4 @@ if __name__ == "__main__":
             save_probability=0.25
 
         )
+
