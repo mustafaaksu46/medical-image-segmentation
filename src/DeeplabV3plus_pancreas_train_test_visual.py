@@ -37,6 +37,33 @@ class DropBlockDeepLab(nn.Module):
         if self.training:
             x = self.dropblock(x)
         return x
+"""
+class DropBlockUNetPP(nn.Module):
+    def __init__(self, base_model, block_size=7, drop_prob=0.1):
+        super().__init__()
+        self.base_model = base_model
+        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
+
+    def forward(self, x):
+        x = self.base_model(x)
+        if self.training:
+            x = self.dropblock(x)
+        return x
+"""
+
+"""
+class DropBlockSegFormer(nn.Module):
+    def __init__(self, base_model, block_size=7, drop_prob=0.2):
+        super().__init__()
+        self.base_model = base_model
+        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
+
+    def forward(self, x):
+        x = self.base_model(x)
+        if self.training:
+            x = self.dropblock(x)
+        return x
+"""
 
 class MedicalDataset(Dataset):
     def __init__(self, image_paths, mask_paths, transform=None):
@@ -198,14 +225,13 @@ if __name__ == "__main__":
     test_loader = DataLoader(test_set, batch_size=12, pin_memory=True)
 
     # model name
-    base_model = smp.DeepLabV3Plus(
-    #base_model = getattr(smp, MODEL)(
+    base_model = getattr(smp, MODEL)(
         encoder_name="resnet50",   #  resnet34, resnet101, timm-efficientnet-b4
         encoder_weights="imagenet",
         in_channels=3,
         classes=1,
         encoder_depth=5,
-        decoder_aspp_dropout=0.5
+        decoder_aspp_dropout=0.5  #  Used only for DeepLabv3Plus and DeepLabv3
     )
 
     model = DropBlockDeepLab(base_model, block_size=7, drop_prob=0.10)
