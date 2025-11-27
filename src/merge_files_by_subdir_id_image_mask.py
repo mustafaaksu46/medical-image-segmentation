@@ -2,8 +2,9 @@ import os
 import shutil
 
 # Source and target folders
-source_dir = "ureter"           # Existing dataset (with subfolders)
-target_dir = "ureter_new"       # New folder (will contain images/ and masks/ subfolders)
+source_dir = "pancreas"      # Existing dataset (with subfolders)
+target_dir = "panc_new"     # New folder (will contain images/ and masks/ subfolders)
+
 images_dir = os.path.join(target_dir, "images")
 masks_dir = os.path.join(target_dir, "masks")
 
@@ -38,4 +39,5 @@ def organize_dataset():
 if __name__ == "__main__":
 
     organize_dataset()
+
 
