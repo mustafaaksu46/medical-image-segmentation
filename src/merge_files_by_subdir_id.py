@@ -3,7 +3,7 @@ import shutil
 
 # Source and target folders
 source_dir = "ureter"        # Existing dataset (with subfolders)
-target_dir = "ureter_new"             # Images and masks in the same folder
+target_dir = "ureter_new"    # Images and masks in the same folder
 
 def organize_dataset():
     os.makedirs(target_dir, exist_ok=True)
@@ -33,3 +33,4 @@ def organize_dataset():
 if __name__ == "__main__":
 
     organize_dataset()
+
