@@ -133,13 +133,21 @@ def train_model(dataset_path, model_name=MODEL, num_epochs=NUMEPOCS, batch_size=
 
     # Setup training
     criterion = FocalBCELoss(alpha=0.90, gamma=2.0)
+    # criterion = CombinedLoss(dice_weight=0.5, focal_weight=0.5)
+    # criterion = nn.BCEWithLogitsLoss()
+    # criterion = nn.BCELoss()
+    # criterion = DiceLoss()
+    # criterion = DiceBCELoss(dice_weight=0.7, bce_weight=0.3)
+    # criterion = FocalBCEDiceLoss(alpha=0.85, gamma=1.5)
     optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3)
+    # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=NUMEPOCS)
+                    
     scaler = GradScaler()
 
     torch.backends.cudnn.benchmark = True
 
-    # Training loop
+    # Training Block
     best_val_loss = float('inf')
     counter = 0
 
@@ -264,5 +272,6 @@ if __name__ == "__main__":
 
 
     print("Training completed!")
+
 
 
