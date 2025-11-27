@@ -11,7 +11,7 @@ def organize_dataset():
     for subdir, _, files in sorted(os.walk(source_dir)):
         folder_name = os.path.basename(subdir)
         if folder_name == source_dir:
-            continue  # Ana klasörün kendisini atla
+            continue  # Exclude the root folder
 
         images = sorted([f for f in files if "image" in f])
         masks = sorted([f for f in files if "mask" in f])
@@ -33,4 +33,5 @@ def organize_dataset():
 if __name__ == "__main__":
 
     organize_dataset()
+
 
