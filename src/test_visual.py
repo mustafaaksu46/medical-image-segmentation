@@ -186,8 +186,9 @@ if __name__ == "__main__":
     import torch.multiprocessing
 
     torch.multiprocessing.freeze_support()
-
-    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_yeni"
+    
+  # “Path to the prepared dataset”
+    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"  
     model_path = f"{NUMEPOCS}_best_model_{MODEL}.pth"
 
     # Check if model file exists
@@ -202,4 +203,5 @@ if __name__ == "__main__":
             num_epochs=NUMEPOCS,
             batch_size=12,
             save_probability=0.25
+
         )
