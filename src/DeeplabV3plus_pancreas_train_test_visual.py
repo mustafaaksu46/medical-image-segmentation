@@ -80,7 +80,7 @@ def get_images_and_masks(root_dir):
     image_paths = sorted([os.path.join(root_dir, f) for f in os.listdir(root_dir) if "mask" not in f])
     mask_paths = sorted([os.path.join(root_dir, f) for f in os.listdir(root_dir) if "mask" in f])
     combined = list(zip(image_paths, mask_paths))
-    random.shuffle(combined)  # Python'un kendi shuffle'ı
+    random.shuffle(combined) 
     return zip(*combined)
 
 class FocalBCELoss(nn.Module):
