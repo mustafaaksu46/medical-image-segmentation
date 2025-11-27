@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import segmentation_models_pytorch as smp
 from dropblock import DropBlock2D
 
@@ -14,6 +15,34 @@ class DropBlockDeepLab(nn.Module):
         if self.training:
             x = self.dropblock(x)
         return x
+
+"""
+class DropBlockUNetPP(nn.Module):
+    def __init__(self, base_model, block_size=7, drop_prob=0.1):
+        super().__init__()
+        self.base_model = base_model
+        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
+
+    def forward(self, x):
+        x = self.base_model(x)
+        if self.training:
+            x = self.dropblock(x)
+        return x
+"""
+
+"""
+class DropBlockSegFormer(nn.Module):
+    def __init__(self, base_model, block_size=7, drop_prob=0.2):
+        super().__init__()
+        self.base_model = base_model
+        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
+
+    def forward(self, x):
+        x = self.base_model(x)
+        if self.training:
+            x = self.dropblock(x)
+        return x
+"""
 
 class FocalBCELoss(nn.Module):
     def __init__(self, alpha=0.90, gamma=2.0):
@@ -53,6 +82,48 @@ class CombinedLoss(nn.Module):
         focal = self.focal_loss(inputs, targets)
         return self.dice_weight * dice + self.focal_weight * focal
 
+class DiceBCELoss(nn.Module):
+    def __init__(self, dice_weight=0.5, bce_weight=0.5):
+        super(DiceBCELoss, self).__init__()
+        self.dice_weight = dice_weight
+        self.bce_weight = bce_weight
+
+    def forward(self, inputs, targets):
+        smooth = 1e-5
+
+        inputs_flat = inputs.view(-1)
+        targets_flat = targets.view(-1)
+
+        bce_loss = F.binary_cross_entropy_with_logits(inputs_flat, targets_flat)
+
+        probs = torch.sigmoid(inputs_flat)
+        intersection = (probs * targets_flat).sum()
+        dice_loss = 1 - (2. * intersection + smooth) / (probs.sum() + targets_flat.sum() + smooth)
+
+        return self.dice_weight * dice_loss + self.bce_weight * bce_loss
+
+class FocalBCEDiceLoss(nn.Module):
+    def __init__(self, alpha=0.85, gamma=1.5, smooth=1e-6):
+        super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.bce = nn.BCEWithLogitsLoss(reduction='none')
+        self.smooth = smooth
+
+    def forward(self, inputs, targets):
+        # Focal Loss kısmı
+        bce_loss = self.bce(inputs, targets)
+        pt = torch.exp(-bce_loss)
+        focal_loss = (self.alpha * (1 - pt) ** self.gamma * bce_loss).mean()
+        inputs_sigmoid = torch.sigmoid(inputs)
+        inputs_flat = inputs_sigmoid.view(-1)
+        targets_flat = targets.view(-1)
+
+        intersection = (inputs_flat * targets_flat).sum()
+        dice_loss = 1 - (2. * intersection + self.smooth) / (inputs_flat.sum() + targets_flat.sum() + self.smooth)
+
+        return focal_loss + dice_loss
+
 #  Unet, UnetPlusPlus, DeepLabV3, DeepLabV3Plus, Segformer
 def create_model(model_name="DeepLabV3Plus",
                  encoder_name="resnet50",
@@ -81,5 +152,6 @@ def create_model(model_name="DeepLabV3Plus",
         model = DropBlockDeepLab(base_model, block_size=block_size, drop_prob=drop_prob)
     else:
         model = base_model
+
 
     return model
