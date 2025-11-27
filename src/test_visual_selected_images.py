@@ -236,7 +236,8 @@ if __name__ == "__main__":
 
     torch.multiprocessing.freeze_support()
 
-    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_new"
+    # “Path to the prepared dataset”
+    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"
     model_path = f"{NUMEPOCS}_best_model_{MODEL}.pth"
 
     # Check if model file exists
@@ -253,3 +254,4 @@ if __name__ == "__main__":
             selected_indices=SELECTED_INDICES
 
         )
+
