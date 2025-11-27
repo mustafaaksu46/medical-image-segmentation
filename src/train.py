@@ -131,7 +131,6 @@ def train_model(dataset_path, model_name=MODEL, num_epochs=NUMEPOCS, batch_size=
                          block_size=7, drop_prob=0.10)
     model.to(device)
 
-    # Setup training
     criterion = FocalBCELoss(alpha=0.90, gamma=2.0)
     # criterion = CombinedLoss(dice_weight=0.5, focal_weight=0.5)
     # criterion = nn.BCEWithLogitsLoss()
@@ -272,6 +271,7 @@ if __name__ == "__main__":
 
 
     print("Training completed!")
+
 
 
 
