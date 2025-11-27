@@ -247,7 +247,7 @@ if __name__ == "__main__":
 
     num_epochs = NUMEPOCS   # Epochs
     best_val_loss = float('inf')
-    patience = 6
+    patience = 6   #10
     counter = 0
 
     for epoch in range(num_epochs):
