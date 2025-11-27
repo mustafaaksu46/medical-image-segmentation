@@ -123,7 +123,7 @@ class CombinedLoss(nn.Module):
 
 """
 **************************************************************************
-                                    Main Program Block
+                          Main Program Block
 **************************************************************************
 """
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
         print("CUDA cache cleared (or an attempt to clear it was made).")
 
     # “Path to the prepared dataset”
-    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"    
+    dataset_path = "Local dataset path"    
     
     start_time = time.time()
 
@@ -197,7 +197,7 @@ if __name__ == "__main__":
     val_loader = DataLoader(val_set, batch_size=12, pin_memory=True)
     test_loader = DataLoader(test_set, batch_size=12, pin_memory=True)
 
-     # model  name
+    # model name
     base_model = smp.DeepLabV3Plus(
     #base_model = getattr(smp, MODEL)(
         encoder_name="resnet50",   #  resnet34, resnet101, timm-efficientnet-b4
@@ -219,7 +219,7 @@ if __name__ == "__main__":
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3)
     model.to(device)
 
-    num_epochs = NUMEPOCS   #  Epochs
+    num_epochs = NUMEPOCS   # Epochs
     best_val_loss = float('inf')
     patience = 6
     counter = 0
@@ -298,7 +298,7 @@ if __name__ == "__main__":
                 with open(test_log_file, "a", newline="") as f:
                     csv.writer(f).writerow([paths[i], p, r, f, iou, s, acc])
 
-    # Eğitim log dosyasını oku
+    # Load the training log file
     log_df = pd.read_csv(train_log_file)
 
     end_time = time.time()
