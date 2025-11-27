@@ -59,7 +59,7 @@ class MedicalDataset(Dataset):
 
         return image, mask, self.image_paths[idx]
 
-def calculate_metrics(pred, mask, threshold=THRESHOLD):  # Threshold değeri
+def calculate_metrics(pred, mask, threshold=THRESHOLD):
     smooth = 1e-6
     pred = (torch.sigmoid(pred) > threshold).float()
     TP = torch.sum(pred * mask).item()
