@@ -249,7 +249,8 @@ if __name__ == "__main__":
 
     torch.multiprocessing.freeze_support()
 
-    dataset_path = "/Users/halid/Desktop/Derin Ogrenme/bes_organ/panc_yeni"
+    # “Path to the prepared dataset”
+    dataset_path = "/Users/user_name/Desktop/organ_name/panc_new"  
 
     model, device, log_file = train_model(
         dataset_path=dataset_path,
@@ -260,5 +261,6 @@ if __name__ == "__main__":
         weight_decay=1e-4,
         patience=6
     )
+
 
     print("Training completed!")
