@@ -21,7 +21,7 @@ H = 256
 W = 256
 NUMEPOCS = 50
 THRESHOLD = 0.40
-MODEL = "DeepLabV3Plus"
+MODEL = "DeepLabV3Plus"   #Unet, UnetPlusPlus, DeepLabV3, DeepLabV3Plus, Segformer
 
 class MedicalDataset(Dataset):
     def __init__(self, image_paths, mask_paths, transform=None):
@@ -259,9 +259,10 @@ if __name__ == "__main__":
         batch_size=12,
         learning_rate=2e-5,
         weight_decay=1e-4,
-        patience=6
+        patience=6  #10
     )
 
 
     print("Training completed!")
+
 
