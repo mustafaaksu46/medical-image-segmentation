@@ -32,7 +32,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 
 - **Dataset**: [Dresden Abdominal Anatomy Dataset](https://www.nature.com/articles/s41597-022-01719-2)  
 - **Type**: Annotated laparoscopic images  
-- **Classes**: Liver, Pancreas, Ureters, Vesicular glands, Intestinal veins  
+- **Organs**: Liver, Pancreas, Ureters, Vesicular glands, Intestinal veins  
 - **Usage**: Used according to the dataset license and data usage agreement.
 
 ---
