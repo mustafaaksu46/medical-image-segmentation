@@ -279,15 +279,20 @@ if __name__ == "__main__":
     )
 
     model = DropBlockDeepLab(base_model, block_size=7, drop_prob=0.10)
-    # model=base_model
-    criterion = FocalBCELoss(alpha=0.90, gamma=2.0)
+
+    criterion = FocalBCELoss(alpha=0.85, gamma=1.5)
     # criterion = CombinedLoss(dice_weight=0.5, focal_weight=0.5)
     # criterion = nn.BCEWithLogitsLoss()
+    # criterion = nn.BCELoss()
+    # criterion = DiceLoss()
+    # criterion = DiceBCELoss(dice_weight=0.7, bce_weight=0.3)
+    # criterion = FocalBCEDiceLoss(alpha=0.85, gamma=1.5)
     optimizer = optim.AdamW(model.parameters(), lr=2e-5, weight_decay=1e-4)    # 50
-    # optimizer = optim.AdamW(model.parameters(), lr=1e-4, weight_decay=1e-3)  # 30
     # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=NUMEPOCS)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3)
+
     model.to(device)
+
 
     num_epochs = NUMEPOCS   # Epochs
     best_val_loss = float('inf')
