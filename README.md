@@ -1,13 +1,13 @@
 # 🧠 Deep Learning-Based Abdominal Organ Segmentation
 
-Deep learning-based segmentation of abdominal organs (such as liver, pancreas, ureters, and vesicular glands) using **DeepLabV3**, **U-Net++**, and **SegFormer** architectures on the **Dresden Anatomy Dataset**.
+Deep learning-based segmentation of abdominal organs (such as liver, pancreas, ureters, and vesicular glands) using **DeepLabv3+**, **U-Net++**, and **SegFormer** architectures on the **Dresden Anatomy Dataset**.
 
 ---
 
 ## 📘 Overview
 
 This repository contains the implementation and evaluation of deep learning models for **automatic segmentation of intra-abdominal organs** in laparoscopic surgery images.  
-The study compares the performance of three state-of-the-art architectures — **DeepLabV3**, **U-Net++**, and **SegFormer** — on the **Dresden Abdominal Anatomy Dataset**.
+The study compares the performance of three state-of-the-art architectures — **DeepLabv3+**, **U-Net++**, and **SegFormer** — on the **Dresden Abdominal Anatomy Dataset**.
 
 👉 **This work specifically focuses on the segmentation of abdominal organs that are difficult to delineate and typically achieve lower accuracy scores in previous studies.**  
 All models were trained and evaluated under the same experimental conditions and hyperparameters to enable a fair comparison between architectures.  
@@ -22,7 +22,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 
 | Model | Framework | Notes |
 |--------|------------|--------|
-| **DeepLabV3** | PyTorch | Atrous convolution-based semantic segmentation |
+| **DeepLabv3+** | PyTorch | Atrous convolution-based semantic segmentation |
 | **U-Net++** | PyTorch | Nested skip connections for better localization |
 | **SegFormer** | PyTorch | Transformer-based lightweight segmentation model |
 
