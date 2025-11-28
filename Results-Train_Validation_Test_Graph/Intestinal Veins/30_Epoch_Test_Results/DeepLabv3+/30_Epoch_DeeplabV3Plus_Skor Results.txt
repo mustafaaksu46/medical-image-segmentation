@@ -49,9 +49,3 @@ Specificity: 0.9945 ± 0.0036
 F1-Score: 0.8077 ± 0.1024
 Accuracy: 0.9940 ± 0.0039
 ==================================================
-
-Generating visual results...
-
-Test results of selected 18 images are complete!
-Visual results: 30_visual_results_DeepLabV3Plus_selected/  in folder
-Test results: in 30_Iveins_test_results_DeepLabV3Plus_selected.csv
