@@ -1,0 +1,57 @@
+Index 17: 1014_image.png
+Index 73: 1065_image.png
+Index 129: 1115_image.png
+Index 157: 1140_image.png
+Index 213: 1191_image.png
+Index 257: 152_image.png
+Index 306: 197_image.png
+Index 358: 243_image.png
+Index 402: 283_image.png
+Index 474: 348_image.png
+Index 566: 430_image.png
+Index 612: 472_image.png
+Index 648: 504_image.png
+Index 753: 59_image.png
+Index 813: 653_image.png
+Index 878: 711_image.png
+Index 911: 741_image.png
+Index 951: 778_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.8946, F1: 0.9444, Acc: 0.9958
+Index 73 - IoU: 0.7598, F1: 0.8635, Acc: 0.9896
+Index 129 - IoU: 0.9431, F1: 0.9707, Acc: 0.9965
+Index 157 - IoU: 0.9111, F1: 0.9535, Acc: 0.9964
+Index 213 - IoU: 0.9124, F1: 0.9542, Acc: 0.9966
+Index 257 - IoU: 0.8793, F1: 0.9358, Acc: 0.9998
+Index 306 - IoU: 0.8625, F1: 0.9262, Acc: 0.9993
+Index 358 - IoU: 0.8461, F1: 0.9166, Acc: 0.9982
+Index 402 - IoU: 0.9012, F1: 0.9481, Acc: 0.9999
+Index 474 - IoU: 0.9414, F1: 0.9698, Acc: 0.9935
+Index 566 - IoU: 0.8937, F1: 0.9439, Acc: 0.9963
+Index 612 - IoU: 0.9234, F1: 0.9602, Acc: 0.9934
+Index 648 - IoU: 0.8618, F1: 0.9258, Acc: 0.9977
+Index 753 - IoU: 0.8859, F1: 0.9395, Acc: 0.9973
+Index 813 - IoU: 0.0000, F1: 0.0000, Acc: 0.9944
+Index 878 - IoU: 0.9203, F1: 0.9585, Acc: 0.9995
+Index 911 - IoU: 0.9309, F1: 0.9642, Acc: 0.9994
+Index 951 - IoU: 0.9465, F1: 0.9725, Acc: 0.9978
+
+==================================================
+TEST RESULTS (Selected 18 Images
+==================================================
+IoU: 0.8452 ± 0.2095
+Precision: 0.8656 ± 0.2134
+Recall: 0.9210 ± 0.2266
+Specificity: 0.9973 ± 0.0021
+F1-Score: 0.8915 ± 0.2177
+Accuracy: 0.9967 ± 0.0026
+==================================================
+
+Generating visual results...
+
+Test results of selected 18 images are complete!
+Visual results: 30_visual_results_UnetPlusPlus_selected/  in folder
+Test results: in 30_Vglands_test_results_UnetPlusPlus_selected.csv
