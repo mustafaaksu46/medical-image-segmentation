@@ -32,7 +32,7 @@ By providing accurate, pixel-level segmentation, this study aims to enhance anat
 
 - **Dataset**: [Dresden Abdominal Anatomy Dataset](https://www.nature.com/articles/s41597-022-01719-2)  
 - **Type**: Annotated laparoscopic images  
-- **Organs**: Pancreas, Ureters, Liver, Vesicular glands, Intestinal veins, Inferior mesenteric artery  
+- **Organs**: Pancreas, Ureter, Liver, Vesicular glands, Intestinal veins, Inferior mesenteric artery  
 - **Usage**: Used according to the dataset license and data usage agreement.
 
 ---
