@@ -49,9 +49,3 @@ Specificity: 0.9973 ± 0.0021
 F1-Score: 0.8915 ± 0.2177
 Accuracy: 0.9967 ± 0.0026
 ==================================================
-
-Generating visual results...
-
-Test results of selected 18 images are complete!
-Visual results: 30_visual_results_UnetPlusPlus_selected/  in folder
-Test results: in 30_Vglands_test_results_UnetPlusPlus_selected.csv
