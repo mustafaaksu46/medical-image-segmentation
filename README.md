@@ -1,6 +1,6 @@
 # 🧠 Deep Learning-Based Abdominal Organ Segmentation
 
-Deep learning-based segmentation of abdominal organs (such as liver, pancreas, ureters, and vesicular glands) using **DeepLabv3+**, **U-Net++**, and **SegFormer** architectures on the **Dresden Anatomy Dataset**.
+Deep learning-based segmentation of abdominal organs (such as pancreas, ureter, liver and vesicular glands) using **DeepLabv3+**, **U-Net++**, and **SegFormer** architectures on the **Dresden Anatomy Dataset**.
 
 ---
 
