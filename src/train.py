@@ -131,12 +131,12 @@ def train_model(dataset_path, model_name=MODEL, num_epochs=NUMEPOCS, batch_size=
                          block_size=7, drop_prob=0.10)
     model.to(device)
 
-    criterion = FocalBCELoss(alpha=0.90, gamma=2.0)
+    criterion = FocalBCELoss(alpha=0.85, gamma=1.5)
     # criterion = CombinedLoss(dice_weight=0.5, focal_weight=0.5)
     # criterion = nn.BCEWithLogitsLoss()
     # criterion = nn.BCELoss()
     # criterion = DiceLoss()
-    # criterion = DiceBCELoss(dice_weight=0.7, bce_weight=0.3)
+    # criterion = DiceBCELoss(dice_weight=0.6, bce_weight=0.4)
     # criterion = FocalBCEDiceLoss(alpha=0.85, gamma=1.5)
     optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=3)
@@ -271,6 +271,7 @@ if __name__ == "__main__":
 
 
     print("Training completed!")
+
 
 
 
