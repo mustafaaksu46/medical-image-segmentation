@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import segmentation_models_pytorch as smp
 from dropblock import DropBlock2D
 
-class DropBlockDeepLab(nn.Module):
+class DropBlockModel(nn.Module):
     def __init__(self, base_model, block_size=7, drop_prob=0.1):
         super().__init__()
         self.base_model = base_model
@@ -15,34 +15,6 @@ class DropBlockDeepLab(nn.Module):
         if self.training:
             x = self.dropblock(x)
         return x
-
-"""
-class DropBlockUNetPP(nn.Module):
-    def __init__(self, base_model, block_size=7, drop_prob=0.1):
-        super().__init__()
-        self.base_model = base_model
-        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
-
-    def forward(self, x):
-        x = self.base_model(x)
-        if self.training:
-            x = self.dropblock(x)
-        return x
-"""
-
-"""
-class DropBlockSegFormer(nn.Module):
-    def __init__(self, base_model, block_size=7, drop_prob=0.2):
-        super().__init__()
-        self.base_model = base_model
-        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
-
-    def forward(self, x):
-        x = self.base_model(x)
-        if self.training:
-            x = self.dropblock(x)
-        return x
-"""
 
 class FocalBCELoss(nn.Module):
     def __init__(self, alpha=0.90, gamma=2.0):
@@ -149,9 +121,9 @@ def create_model(model_name="DeepLabV3Plus",
         )
 
     if use_dropblock:
-        model = DropBlockDeepLab(base_model, block_size=block_size, drop_prob=drop_prob)
+        model = DropBlockModel(base_model, block_size=block_size, drop_prob=drop_prob)
     else:
         model = base_model
 
-
     return model
+
