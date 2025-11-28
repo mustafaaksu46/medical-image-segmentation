@@ -27,7 +27,7 @@ THRESHOLD=0.40
 
 MODEL="DeepLabV3Plus"     #  Unet, UnetPlusPlus, DeepLabV3, DeepLabV3Plus, Segformer
 
-class DropBlockDeepLab(nn.Module):
+class DropBlockModel(nn.Module):
     def __init__(self, base_model, block_size=7, drop_prob=0.1):
         super().__init__()
         self.base_model = base_model
@@ -38,33 +38,6 @@ class DropBlockDeepLab(nn.Module):
         if self.training:
             x = self.dropblock(x)
         return x
-"""
-class DropBlockUNetPP(nn.Module):
-    def __init__(self, base_model, block_size=7, drop_prob=0.1):
-        super().__init__()
-        self.base_model = base_model
-        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
-
-    def forward(self, x):
-        x = self.base_model(x)
-        if self.training:
-            x = self.dropblock(x)
-        return x
-"""
-
-"""
-class DropBlockSegFormer(nn.Module):
-    def __init__(self, base_model, block_size=7, drop_prob=0.2):
-        super().__init__()
-        self.base_model = base_model
-        self.dropblock = DropBlock2D(drop_prob=drop_prob, block_size=block_size)
-
-    def forward(self, x):
-        x = self.base_model(x)
-        if self.training:
-            x = self.dropblock(x)
-        return x
-"""
 
 class MedicalDataset(Dataset):
     def __init__(self, image_paths, mask_paths, transform=None):
@@ -278,7 +251,7 @@ if __name__ == "__main__":
         decoder_aspp_dropout=0.5  #  Used only for DeepLabv3Plus and DeepLabv3 models
     )
 
-    model = DropBlockDeepLab(base_model, block_size=7, drop_prob=0.10)
+    model = DropBlockModel(base_model, block_size=7, drop_prob=0.10)
 
     criterion = FocalBCELoss(alpha=0.85, gamma=1.5)
     # criterion = CombinedLoss(dice_weight=0.5, focal_weight=0.5)
