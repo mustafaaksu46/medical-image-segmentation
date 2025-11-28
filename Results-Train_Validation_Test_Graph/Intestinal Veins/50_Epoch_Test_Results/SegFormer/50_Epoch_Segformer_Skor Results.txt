@@ -1,0 +1,57 @@
+Index 17: 03_24_image.png
+Index 73: 05_1_image.png
+Index 129: 07_26_image.png
+Index 157: 07_51_image.png
+Index 213: 09_4_image.png
+Index 257: 10_37_image.png
+Index 306: 11_45_image.png
+Index 358: 12_41_image.png
+Index 402: 14_3_image.png
+Index 474: 16_8_image.png
+Index 566: 18_3_image.png
+Index 612: 19_27_image.png
+Index 648: 20_21_image.png
+Index 753: 22_12_image.png
+Index 813: 23_13_image.png
+Index 878: 24_28_image.png
+Index 911: 24_58_image.png
+Index 951: 25_36_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.7167, F1: 0.8350, Acc: 0.9948
+Index 73 - IoU: 0.8338, F1: 0.9094, Acc: 0.9983
+Index 129 - IoU: 0.8817, F1: 0.9371, Acc: 0.9963
+Index 157 - IoU: 0.8482, F1: 0.9179, Acc: 0.9877
+Index 213 - IoU: 0.8899, F1: 0.9417, Acc: 0.9983
+Index 257 - IoU: 0.7311, F1: 0.8447, Acc: 0.9991
+Index 306 - IoU: 0.6629, F1: 0.7973, Acc: 0.9982
+Index 358 - IoU: 0.6908, F1: 0.8171, Acc: 0.9952
+Index 402 - IoU: 0.7749, F1: 0.8732, Acc: 0.9987
+Index 474 - IoU: 0.2975, F1: 0.4585, Acc: 0.9911
+Index 566 - IoU: 0.8513, F1: 0.9197, Acc: 0.9988
+Index 612 - IoU: 0.7538, F1: 0.8596, Acc: 0.9960
+Index 648 - IoU: 0.6232, F1: 0.7679, Acc: 0.9836
+Index 753 - IoU: 0.8052, F1: 0.8921, Acc: 0.9971
+Index 813 - IoU: 0.8399, F1: 0.9130, Acc: 0.9927
+Index 878 - IoU: 0.8095, F1: 0.8947, Acc: 0.9927
+Index 911 - IoU: 0.8405, F1: 0.9133, Acc: 0.9979
+Index 951 - IoU: 0.7225, F1: 0.8389, Acc: 0.9975
+
+==================================================
+TEST RESULTS (Selected Images
+==================================================
+IoU: 0.7541 ± 0.1336
+Precision: 0.7778 ± 0.1323
+Recall: 0.9594 ± 0.0569
+Specificity: 0.9962 ± 0.0025
+F1-Score: 0.8517 ± 0.1069
+Accuracy: 0.9952 ± 0.0041
+==================================================
+
+Generating visual results...
+
+Test results of selected 18 images are complete!
+Visual results: 50_visual_results_Segformer_selected/  in folder
+Test results: in 50_Iveins_test_results_Segformer_selected.csv
