@@ -49,9 +49,3 @@ Specificity: 0.9962 ± 0.0025
 F1-Score: 0.8517 ± 0.1069
 Accuracy: 0.9952 ± 0.0041
 ==================================================
-
-Generating visual results...
-
-Test results of selected 18 images are complete!
-Visual results: 50_visual_results_Segformer_selected/  in folder
-Test results: in 50_Iveins_test_results_Segformer_selected.csv
