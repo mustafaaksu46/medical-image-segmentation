@@ -1,0 +1,57 @@
+Index 17: 1014_image.png
+Index 73: 1065_image.png
+Index 129: 1115_image.png
+Index 157: 1140_image.png
+Index 213: 1191_image.png
+Index 257: 1230_image.png
+Index 306: 127_image.png
+Index 358: 174_image.png
+Index 402: 213_image.png
+Index 474: 279_image.png
+Index 566: 361_image.png
+Index 612: 402_image.png
+Index 648: 435_image.png
+Index 753: 52_image.png
+Index 813: 584_image.png
+Index 878: 642_image.png
+Index 911: 672_image.png
+Index 951: 708_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.8281, F1: 0.9060, Acc: 0.9997
+Index 73 - IoU: 0.9534, F1: 0.9762, Acc: 0.9987
+Index 129 - IoU: 0.8986, F1: 0.9466, Acc: 0.9995
+Index 157 - IoU: 0.8731, F1: 0.9323, Acc: 0.9995
+Index 213 - IoU: 0.6494, F1: 0.7874, Acc: 0.9988
+Index 257 - IoU: 0.8506, F1: 0.9193, Acc: 0.9991
+Index 306 - IoU: 0.8873, F1: 0.9403, Acc: 0.9993
+Index 358 - IoU: 0.6967, F1: 0.8212, Acc: 0.9889
+Index 402 - IoU: 0.9190, F1: 0.9578, Acc: 0.9966
+Index 474 - IoU: 0.3158, F1: 0.4800, Acc: 0.9984
+Index 566 - IoU: 0.8119, F1: 0.8962, Acc: 0.9983
+Index 612 - IoU: 0.9627, F1: 0.9810, Acc: 0.9996
+Index 648 - IoU: 0.9318, F1: 0.9647, Acc: 0.9997
+Index 753 - IoU: 0.9178, F1: 0.9571, Acc: 0.9982
+Index 813 - IoU: 0.5923, F1: 0.7439, Acc: 0.9979
+Index 878 - IoU: 0.2746, F1: 0.4308, Acc: 0.9929
+Index 911 - IoU: 0.8317, F1: 0.9081, Acc: 0.9979
+Index 951 - IoU: 0.9206, F1: 0.9586, Acc: 0.9983
+
+==================================================
+TEST RESULTS (Selected 18 Images
+==================================================
+IoU: 0.7842 ± 0.2000
+Precision: 0.8479 ± 0.1498
+Recall: 0.9144 ± 0.1666
+Specificity: 0.9986 ± 0.0020
+F1-Score: 0.8615 ± 0.1572
+Accuracy: 0.9978 ± 0.0027
+==================================================
+
+Generating visual results...
+
+Test results of selected 18 images are complete!
+Visual results: 30_visual_results_UnetPlusPlus_selected/  in folder
+Test results: in 30_Ureter_test_results_UnetPlusPlus_selected.csv
