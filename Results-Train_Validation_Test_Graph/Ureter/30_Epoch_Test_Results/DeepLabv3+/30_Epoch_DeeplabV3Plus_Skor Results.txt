@@ -1,0 +1,51 @@
+Index 17: 1014_image.png
+Index 73: 1065_image.png
+Index 129: 1115_image.png
+Index 157: 1140_image.png
+Index 213: 1191_image.png
+Index 257: 1230_image.png
+Index 306: 127_image.png
+Index 358: 174_image.png
+Index 402: 213_image.png
+Index 474: 279_image.png
+Index 566: 361_image.png
+Index 612: 402_image.png
+Index 648: 435_image.png
+Index 753: 52_image.png
+Index 813: 584_image.png
+Index 878: 642_image.png
+Index 911: 672_image.png
+Index 951: 708_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.3333, F1: 0.5000, Acc: 0.9982
+Index 73 - IoU: 0.5762, F1: 0.7311, Acc: 0.9801
+Index 129 - IoU: 0.5171, F1: 0.6817, Acc: 0.9955
+Index 157 - IoU: 0.5067, F1: 0.6726, Acc: 0.9966
+Index 213 - IoU: 0.4464, F1: 0.6172, Acc: 0.9971
+Index 257 - IoU: 0.3796, F1: 0.5503, Acc: 0.9921
+Index 306 - IoU: 0.5810, F1: 0.7350, Acc: 0.9959
+Index 358 - IoU: 0.7649, F1: 0.8668, Acc: 0.9916
+Index 402 - IoU: 0.8193, F1: 0.9007, Acc: 0.9911
+Index 474 - IoU: 0.6111, F1: 0.7586, Acc: 0.9995
+Index 566 - IoU: 0.6770, F1: 0.8074, Acc: 0.9962
+Index 612 - IoU: 0.5074, F1: 0.6732, Acc: 0.9913
+Index 648 - IoU: 0.2917, F1: 0.4517, Acc: 0.9941
+Index 753 - IoU: 0.7409, F1: 0.8511, Acc: 0.9933
+Index 813 - IoU: 0.4424, F1: 0.6135, Acc: 0.9976
+Index 878 - IoU: 0.5860, F1: 0.7389, Acc: 0.9952
+Index 911 - IoU: 0.7473, F1: 0.8554, Acc: 0.9961
+Index 951 - IoU: 0.5567, F1: 0.7152, Acc: 0.9850
+
+==================================================
+TEST RESULTS (Selected 18 Images
+==================================================
+IoU: 0.5603 ± 0.1462
+Precision: 0.6123 ± 0.1503
+Recall: 0.8860 ± 0.1647
+Specificity: 0.9942 ± 0.0049
+F1-Score: 0.7067 ± 0.1232
+Accuracy: 0.9937 ± 0.0047
+==================================================
