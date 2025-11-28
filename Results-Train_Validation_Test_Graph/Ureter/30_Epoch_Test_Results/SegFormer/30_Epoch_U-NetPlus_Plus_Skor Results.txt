@@ -1,0 +1,57 @@
+Index 17: 1014_image.png
+Index 73: 1065_image.png
+Index 129: 1115_image.png
+Index 157: 1140_image.png
+Index 213: 1191_image.png
+Index 257: 1230_image.png
+Index 306: 127_image.png
+Index 358: 174_image.png
+Index 402: 213_image.png
+Index 474: 279_image.png
+Index 566: 361_image.png
+Index 612: 402_image.png
+Index 648: 435_image.png
+Index 753: 52_image.png
+Index 813: 584_image.png
+Index 878: 642_image.png
+Index 911: 672_image.png
+Index 951: 708_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.5488, F1: 0.7087, Acc: 0.9989
+Index 73 - IoU: 0.7965, F1: 0.8867, Acc: 0.9934
+Index 129 - IoU: 0.8070, F1: 0.8932, Acc: 0.9989
+Index 157 - IoU: 0.7343, F1: 0.8468, Acc: 0.9988
+Index 213 - IoU: 0.5956, F1: 0.7465, Acc: 0.9986
+Index 257 - IoU: 0.5921, F1: 0.7438, Acc: 0.9970
+Index 306 - IoU: 0.6336, F1: 0.7757, Acc: 0.9967
+Index 358 - IoU: 0.8611, F1: 0.9254, Acc: 0.9956
+Index 402 - IoU: 0.8751, F1: 0.9334, Acc: 0.9942
+Index 474 - IoU: 0.7419, F1: 0.8519, Acc: 0.9998
+Index 566 - IoU: 0.8624, F1: 0.9261, Acc: 0.9987
+Index 612 - IoU: 0.7821, F1: 0.8777, Acc: 0.9977
+Index 648 - IoU: 0.0000, F1: 0.0000, Acc: 0.9962
+Index 753 - IoU: 0.8520, F1: 0.9201, Acc: 0.9966
+Index 813 - IoU: 0.6844, F1: 0.8126, Acc: 0.9984
+Index 878 - IoU: 0.7544, F1: 0.8600, Acc: 0.9970
+Index 911 - IoU: 0.8444, F1: 0.9156, Acc: 0.9978
+Index 951 - IoU: 0.3843, F1: 0.5552, Acc: 0.9877
+
+==================================================
+TEST RESULTS (Selected Images
+==================================================
+IoU: 0.6861 ± 0.2104
+Precision: 0.7601 ± 0.2049
+Recall: 0.8382 ± 0.2433
+Specificity: 0.9980 ± 0.0016
+F1-Score: 0.7877 ± 0.2135
+Accuracy: 0.9968 ± 0.0027
+==================================================
+
+Generating visual results...
+
+Test results of selected 18 images are complete!
+Visual results: 30_visual_results_Segformer_selected/  in folder
+Test results: in 30_Ureter_test_results_Segformer_selected.csv
