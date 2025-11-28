@@ -1,0 +1,57 @@
+Index 17: 03_24_image.png
+Index 73: 05_1_image.png
+Index 129: 07_26_image.png
+Index 157: 07_51_image.png
+Index 213: 09_4_image.png
+Index 257: 10_37_image.png
+Index 306: 11_45_image.png
+Index 358: 12_41_image.png
+Index 402: 14_3_image.png
+Index 474: 16_8_image.png
+Index 566: 18_3_image.png
+Index 612: 19_27_image.png
+Index 648: 20_21_image.png
+Index 753: 22_12_image.png
+Index 813: 23_13_image.png
+Index 878: 24_28_image.png
+Index 911: 24_58_image.png
+Index 951: 25_36_image.png
+
+Total number of images to be tested: 18
+
+Testing process begins...
+Index 17 - IoU: 0.4358, F1: 0.6071, Acc: 0.9866
+Index 73 - IoU: 0.7474, F1: 0.8554, Acc: 0.9971
+Index 129 - IoU: 0.7647, F1: 0.8667, Acc: 0.9919
+Index 157 - IoU: 0.8582, F1: 0.9237, Acc: 0.9880
+Index 213 - IoU: 0.8369, F1: 0.9112, Acc: 0.9973
+Index 257 - IoU: 0.6696, F1: 0.8021, Acc: 0.9989
+Index 306 - IoU: 0.4141, F1: 0.5856, Acc: 0.9954
+Index 358 - IoU: 0.5846, F1: 0.7379, Acc: 0.9923
+Index 402 - IoU: 0.7487, F1: 0.8563, Acc: 0.9985
+Index 474 - IoU: 0.4687, F1: 0.6383, Acc: 0.9958
+Index 566 - IoU: 0.7588, F1: 0.8629, Acc: 0.9980
+Index 612 - IoU: 0.6649, F1: 0.7988, Acc: 0.9941
+Index 648 - IoU: 0.7695, F1: 0.8697, Acc: 0.9893
+Index 753 - IoU: 0.7155, F1: 0.8341, Acc: 0.9953
+Index 813 - IoU: 0.7405, F1: 0.8509, Acc: 0.9869
+Index 878 - IoU: 0.8194, F1: 0.9007, Acc: 0.9930
+Index 911 - IoU: 0.8261, F1: 0.9048, Acc: 0.9977
+Index 951 - IoU: 0.5784, F1: 0.7329, Acc: 0.9952
+
+==================================================
+TEST RESULTS (Selected 18 Images
+==================================================
+IoU: 0.6890 ± 0.1346
+Precision: 0.7134 ± 0.1302
+Recall: 0.9444 ± 0.0586
+Specificity: 0.9945 ± 0.0036
+F1-Score: 0.8077 ± 0.1024
+Accuracy: 0.9940 ± 0.0039
+==================================================
+
+Generating visual results...
+
+Test results of selected 18 images are complete!
+Visual results: 30_visual_results_DeepLabV3Plus_selected/  in folder
+Test results: in 30_Iveins_test_results_DeepLabV3Plus_selected.csv
