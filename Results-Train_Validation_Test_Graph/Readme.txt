@@ -1,1 +1,1 @@
-Several results obtained from the study have been incorporated, including the training and test datasets along with their respective graphs. Furthermore, images of the segmented output, the ground truth mask, and the prediction mask are also provided.
+Some results from the study have been included. These include the training and test data along with their corresponding graphs. Additionally, there are images of the original image of the segmented organ, the ground truth mask, and the prediction mask.
