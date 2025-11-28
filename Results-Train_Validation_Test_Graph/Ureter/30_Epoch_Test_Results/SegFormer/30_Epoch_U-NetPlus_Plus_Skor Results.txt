@@ -49,9 +49,3 @@ Specificity: 0.9980 ± 0.0016
 F1-Score: 0.7877 ± 0.2135
 Accuracy: 0.9968 ± 0.0027
 ==================================================
-
-Generating visual results...
-
-Test results of selected 18 images are complete!
-Visual results: 30_visual_results_Segformer_selected/  in folder
-Test results: in 30_Ureter_test_results_Segformer_selected.csv
