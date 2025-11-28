@@ -14,7 +14,7 @@ from torch.utils.data import Dataset, DataLoader, random_split
 import matplotlib.pyplot as plt
 from torch.amp import GradScaler, autocast
 
-from model import create_model, FocalBCELoss, CombinedLoss
+from model import create_model, DiceLoss, FocalBCELoss, DiceBCELoss, CombinedLoss, FocalBCEDiceLoss
 
 """ Global parameters """
 H = 256
@@ -271,6 +271,7 @@ if __name__ == "__main__":
 
 
     print("Training completed!")
+
 
 
 
