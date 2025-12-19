@@ -1,1 +1,1 @@
-This section presents additional graphs obtained from 256×256 pancreas images trained over 30 epochs using the U-Net++ model.
+This folder presents graphical examples obtained from U-Net++ model training on 256×256 pancreas images over 30 epochs.
